@@ -11,7 +11,7 @@ export class AppController {
   }
 
   @Get('100')
-  get100(): string {
+  get100(): { code: number; message: string } {
     return this.appService.get100();
   }
 

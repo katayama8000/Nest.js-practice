@@ -5,8 +5,8 @@ export class AppService {
   getHello(): string {
     return 'Hello World!';
   }
-  get100(): string {
-    return 'Continue';
+  get100(): { code: number; message: string } {
+    return { code: 100, message: 'Continue' };
   }
 
   get101(): string {
