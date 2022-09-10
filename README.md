@@ -1,1 +1,2 @@
-[http.cat](https://http.cat/)
+- [http.cat](https://http.cat/)
+- [statuscode](https://www.itmanage.co.jp/column/http-www-request-response-statuscode/)
