@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-const socket = io('http://localhost:3000');
+const socket = io('http://localhost:3000', { transports: ['websocket'] });
 
 const message = document.getElementById('message');
 const messages = document.getElementById('messages');
