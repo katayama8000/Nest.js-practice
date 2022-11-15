@@ -12,11 +12,11 @@ export class User {
   username: string;
 
   @Column({
-    name: 'email_adress',
+    name: 'email',
     nullable: false,
     default: '',
   })
-  emailAdress: string;
+  email: string;
 
   @Column({
     nullable: false,
