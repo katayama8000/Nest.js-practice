@@ -1,15 +1,18 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { TodoModule } from './todo/todo.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import entities from './typeorm';
 @Module({
   imports: [
-    TodoModule,
     TypeOrmModule.forRoot({
-      type: 'sqlite',
-      database: 'todoDB',
-      entities: [__dirname + '/**/*.entity{.ts,.js}'],
+      type: 'mysql',
+      host: 'localhost',
+      port: 3306,
+      username: 'root',
+      password: '109609Akg',
+      database: 'tutorial_db',
+      entities: entities,
       synchronize: true,
     }),
   ],
