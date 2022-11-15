@@ -8,6 +8,8 @@ import {
   ParseIntPipe,
   Post,
   Res,
+  UsePipes,
+  ValidationPipe,
 } from '@nestjs/common';
 import { Response } from 'express';
 import { CreateCustomerDto } from '../../dtos/createCustomer.dto';
@@ -43,6 +45,7 @@ export class CustomersController {
   }
 
   @Post('create')
+  @UsePipes(ValidationPipe)
   async createCustomer(@Body() createCustomerDto: CreateCustomerDto) {
     const { email, name, id } = createCustomerDto;
     console.log('createCustomerDto: ', email, name, id);
