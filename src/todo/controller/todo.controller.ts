@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import {
   Controller,
   Get,
@@ -13,7 +14,8 @@ import { UpdateResult, DeleteResult, FindOneOptions } from 'typeorm';
 
 @Controller('todo')
 export class TodoController {
-  constructor(private readonly TodoService: TodoService) {}
+  constructor(private TodoService: TodoService) {}
+
   @Get('test')
   test(): string {
     console.log('test');
