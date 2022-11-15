@@ -27,6 +27,7 @@
     "@nestjs/typeorm": "^9.0.1",
     "@nestjs/websockets": "^9.1.4",
     "cors": "^2.8.5",
+    "mysql2": "^2.3.3",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^7.2.0",
