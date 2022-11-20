@@ -15,4 +15,5 @@ enter password: 109609Akg
 use tutorial_db;
 show tables;
 describe users;
+
 ```
