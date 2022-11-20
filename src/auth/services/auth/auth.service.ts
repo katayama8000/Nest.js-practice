@@ -8,10 +8,9 @@ export class AuthService {
     @Inject('USER_SERVICE') private readonly userService: UsersService,
   ) {}
 
-  async validateUser(username: string, password: string) {
-    console.log('username : ', username, 'password : ', password);
+  async validateUser(email: string, password: string) {
     console.log('Inside AuthService.validateUser()');
-    const userDB = await this.userService.findUserByUsername(username);
+    const userDB = await this.userService.findUserByUsername(email);
     if (userDB) {
       const isMatched = comparePassword(password, userDB.password);
       if (isMatched) {

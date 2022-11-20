@@ -13,14 +13,19 @@ export class AuthController {
   @UseGuards(AuthGuard('local'))
   @Post('login')
   async login(@Request() req) {
+    console.log('login');
     //return 'login';
+  }
+
+  @Get('')
+  test() {
+    return { username: 'USHIO' };
   }
 
   @Get('session')
   async getAuthSession(@Session() session: Record<string, any>) {
     console.log(session, 111111111111);
     session.authenticated = true;
-    console.log(session.authenticated, 2222222222);
     return session;
   }
 }
