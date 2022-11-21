@@ -17,11 +17,12 @@ import {
 import { CreateUserDto } from 'src/users/dto/createUser.dto';
 import { UserNotFoundException } from 'src/users/exceptions/UserNotFound.exception';
 import { HttpExceptionFilter } from 'src/users/filters/HttpException.filter';
+import { UsersService } from 'src/users/services/users/users.service';
 import { SerializedUser } from 'src/users/types';
 
 @Controller('users')
 export class UsersController {
-  constructor(@Inject('USERS_SERVICE') private usersService) {}
+  constructor(@Inject('USERS_SERVICE') private usersService: UsersService) {}
 
   @Get('')
   getUsers() {
